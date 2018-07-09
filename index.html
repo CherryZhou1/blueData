@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--H5页面窗口自动调整到设备宽度，并禁止用户缩放页面-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <!--IE = edge告诉IE使用最新的引擎渲染网页-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--删除默认的苹果工具栏和菜单栏-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!--将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式-->
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <!--忽略将页面中的数字识别为电话号码-->
+  <meta name="format-detection" content="telephone=no" />
+  <!--忽略Android平台中对邮箱地址的识别-->
+  <meta name="format-detection" content="email=no" />
+  <script>
+    function setRem() {
+      var deviceWidth = document.documentElement.clientWidth;
+      if (deviceWidth > 640) deviceWidth = 640;
+      document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    setRem();
+    window.addEventListener('resize', function() {
+      setRem();
+    });
+  </script>
+  <title>蓝穹</title>
+  <link rel="stylesheet" href="static/styles/reset.css">
+  <link rel="stylesheet" href="static/styles/blue.css">
+  <link rel="stylesheet" href="static/styles/dark.css">
+</head>
+
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+
+</html>
